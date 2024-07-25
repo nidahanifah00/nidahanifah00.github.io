@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tambah data mahasiswa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #E3EEF5;
+        }
+
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            background-color: #343a40;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 20px;
+            color: white;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+        }
+
+        .sidebar a:hover {
+            background-color: #575d63;
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+        .header {
+            background-color: white;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header img {
+            width: 80px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-info img {
+            width: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #E3EEF5;
+            min-width: 260px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dashboard-title {
+            margin: 20px 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .main-content {
+            margin-right: 300px;
+            padding: 20px;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .form-group label {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            background-color: #e6f2ff;
+        }
+
+        .form-buttons {
+            display: flex;
+            
+        }
+
+        .form-buttons button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-buttons button.cancel {
+            background-color: #E3EEF5;
+            margin-right: 400px;
+            
+        }
+
+        .form-buttons button.submit {
+            background-color: #3498db;
+            color: black;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <a href="dashboard.html" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="#"><i class="fas fa-book"></i> Panduan Aplikasi & Fitur</a>
+        <a href="#"><i class="fas fa-envelope"></i> E-mail</a>
+        <a href="#"><i class="fas fa-calendar-alt"></i> Jadwal Perkuliahan</a>
+        <a href="#"><i class="fas fa-calendar"></i> Kalender</a>
+        <a href="#"><i class="fas fa-check-square"></i> Absensi</a>
+        <a href="data mahasiswa.html"><i class="fas fa-user-plus"></i> Tambah Data Mahasiswa</a>
+        <a href="kapitulasi.html"><i class="fas fa-clipboard"></i> Kapitulasi Nilai</a>
+        <a href="#"><i class="fas fa-cog"></i> Pengaturan</a>
+    </div>
+
+    <div class="content">
+        <div class="header">
+            <img src="logo amikom.png" alt="Logo Amikom">
+            <div>
+                <h1>Universitas Amikom Yogyakarta</h1>
+            </div>
+            <div class="user-info">
+                <img src="foto profil login.png" alt="User Image">
+                <div class="dropdown">
+                    <b><span>User Dosen</span></b>
+                    <div class="dropdown-content">
+                        <b><a href="#"><i class="fas fa-user-alt"></i> Firman Asharudin, M.Kom</a></b>
+                        <hr>
+                        <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                        <a href="#"><i class="fas fa-user-alt"></i> Profil</a>
+                        <a href="#"><i class="fas fa-comment-alt"></i> Pesan</a>
+                        <a href="#"><i class="fas fa-cog"></i> Pengaturan</a>
+                        <a href="#"><i class="fas fa-sign-out-alt"></i> Keluar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <h2>Tambah Data Mahasiswa</h2>
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="nama">Nama</label>
+                    <input type="text" id="nama" name="nama">
+                </div>
+                <div class="form-group">
+                    <label for="nim">NIM</label>
+                    <input type="text" id="nim" name="nim">
+                </div>
+                <div class="form-group">
+                    <label for="program-studi">Program Studi</label>
+                    <input type="text" id="program-studi" name="program-studi">
+                </div><br>
+                <div class="form-buttons">
+                    <button class="cancel"><b>Cancel</b></button>
+                    <button class="submit"><b>Submit</b></button>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
